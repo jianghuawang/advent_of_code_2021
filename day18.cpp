@@ -124,7 +124,7 @@ Number* add(Number *lhs, Number *rhs) {
 
 int calMagnitude(Number *n) {
     if (n->isInt) { return n->val; }
-    return 3 * calMagitude(n->p.first) + 2 * calMagitude(n->p.second);
+    return 3 * calMagnitude(n->p.first) + 2 * calMagnitude(n->p.second);
 }
 
 void part1() {
