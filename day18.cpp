@@ -122,7 +122,7 @@ Number* add(Number *lhs, Number *rhs) {
     return n;
 }
 
-int calMagitude(Number *n) {
+int calMagnitude(Number *n) {
     if (n->isInt) { return n->val; }
     return 3 * calMagitude(n->p.first) + 2 * calMagitude(n->p.second);
 }
@@ -141,7 +141,7 @@ void part1() {
         lhs = add(lhs, rhs);
     }
     printlnNumber(lhs);
-    cout << calMagitude(lhs) << endl;
+    cout << calMagnitude(lhs) << endl;
     clean(lhs);
 }
 
@@ -158,7 +158,7 @@ void part2() {
             if (i == j) { continue; }
             Number *lhs = copy(nums[i]);
             Number *rhs = copy(nums[j]);
-            res = max(res, calMagitude(add(lhs, rhs)));
+            res = max(res, calMagnitude(add(lhs, rhs)));
             clean(lhs);
             clean(rhs);
         }
