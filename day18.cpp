@@ -73,7 +73,7 @@ void explode(Number *n, Number *p, int level, int*& leftMost, int& rightVal, boo
         return;
     }
     if (!happened && level >= 4) {
-        if (leftMost) { (*leftMost) += n->p.first->val; };
+        if (leftMost) { (*leftMost) += n->p.first->val; }
         rightVal = n->p.second->val;
         Number *new_num = new Number(0);
         if (n == p->p.first) { p->p.first = new_num;}
